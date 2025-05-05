@@ -7,7 +7,7 @@ elseif game.PlaceId == 7449423635 then
 end;
 print("--------------------------------------------------------------------------");
 print("-- [[ Webhook ]] --");
-(loadstring(game:HttpGet("https://relzhub.farrghii.com/webhook/bloxfruits.lua")))();
+(loadstring(game:HttpGet("https://satx hub suporte.farrghii.com/webhook/bloxfruits.lua")))();
 print("--------------------------------------------------------------------------");
 local Update = (loadstring(Game:HttpGet("https://relzhub.farrghii.com/lib/source.lua")))();
 if Update:LoadAnimation() then
