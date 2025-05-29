@@ -1,84 +1,101 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-local Tab = Window:MakeTab({
-	Name = "Tab 1",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
+Window
+local Window = redzlib:MakeWindow({
+  Title = "redz Hub : Blox Fruits",
+  SubTitle = "by redz9999",
+  SaveFolder = "testando | redz lib v5.lua"
 })
-OrionLib:MakeNotification({
-	Name = "nexus hub | meme sea",
-	Content = "Notification content... what will it say??",
-	Image = "rbxassetid://4483345998",
-	Time = 5
+Icon
+Window:AddMinimizeButton({
+    Button = { Image = "rbxassetid://71014873973869", BackgroundTransparency = 0 },
+    Corner = { CornerRadius = UDim.new(35, 1) },
+})p
+Tab1:AddDiscordInvite({
+    Name = "Name Hub",
+    Description = "Join server",
+    Logo = "rbxassetid://18751483361",
+    Invite = "Link discord invite",
 })
-Tab:AddButton({
-	Name = "Button!",
-	Callback = function()
-      		print("button pressed")
-  	end    
-})
-Tab:AddToggle({
-	Name = "This is a toggle!",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-	end    
-})
-Tab:AddColorpicker({
-	Name = "Colorpicker",
-	Default = Color3.fromRGB(255, 0, 0),
-	Callback = function(Value)
-		print(Value)
-	end	  
-})
--- ColorPicker:Set(Color3.fromRGB(255,255,255))
-Tab:AddSlider({
-	Name = "Slider",
-	Min = 0,
-	Max = 20,
-	Default = 5,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "bananas",
-	Callback = function(Value)
-		print(Value)
-	end    
-})
+local Tab1 = Window:MakeTab({"Um", "cherry"})
 
- --Slider:Set(2)
- Tab:AddLabel("Label")
---CoolLabel:Set("Label New!")
-Tab:AddParagraph("Paragraph","Paragraph Content")
--- CoolParagraph:Set("Paragraph New!")
-
-Tab:AddTextbox({
-	Name = "Textbox",
-	Default = "default box input",
-	TextDisappear = true,
-	Callback = function(Value)
-		print(Value)
-	end	  
-})
+  redzlib:SetTheme("Dark")
 
 
-Tab:AddBind({
-	Name = "Bind",
-	Default = Enum.KeyCode.E,
-	Hold = false,
-	Callback = function()
-		print("press")
-	end    
+  redzlib:SetTheme("Darker")
+
+  redzlib:SetTheme("Purple")
+Window:SelectTab(Tab1)
+Section
+local Section = Tab1:AddSection({"Section"})
+Paragraph
+local Paragraph = Tab1:AddParagraph({"Paragraph", "This is a Paragraph\nSecond Line"})
+Dialog
+  local Dialog = Window:Dialog({
+    Title = "Dialog",
+    Text = "This is a Dialog",
+    Options = {
+      {"Confirm", function()
+        
+      end},
+      {"Maybe", function()
+        
+      end},
+      {"Cancel", function()
+        
+      end}
+    }
+  })
+Button
+Tab1:AddButton({"Print", function(Value)
+print("Hello World!")
+end})
+Toggle 1
+local Toggle1 = Tab1:AddToggle({
+  Name = "Toggle",
+  Description = "This is a <font color='rgb(88, 101, 242)'>Toggle</font> Example",
+  Default = false 
 })
--- Bind:Set(Enum.KeyCode.E)
-Tab:AddDropdown({
-	Name = "Dropdown",
-	Default = "1",
-	Options = {"1", "2"},
-	Callback = function(Value)
-		print(Value)
-	end    
+Toggle1:Callback(function(Value)
+ 
+end)
+Toggle 2
+Tab1:AddToggle({
+    Name = "Toggle",
+    Default = false,
+    Callback = function(v)
+
+    end
 })
--- Dropdown:Refresh(List<table>,true)
---Dropdown:Set("dropdown option")
-OrionLib:Init()
--- destroying the interface: OrionLib:Destroy()
+Sliders
+Tab1:AddSlider({
+  Name = "Speed",
+  Min = 1,
+  Max = 100,
+  Increase = 1,
+  Default = 16,
+  Callback = function(Value)
+  
+  end
+})
+Dropdown
+local Dropdown = Tab1:AddDropdown({
+  Name = "Players List",
+  Description = "Select the <font color='rgb(88, 101, 242)'>Number</font>",
+  Options = {"one", "two", "three"},
+  Default = "two",
+  Flag = "dropdown teste",
+  Callback = function(Value)
+    
+  end
+})
+Textbox
+Tab1:AddTextBox({
+  Name = "Name item",
+  Description = "1 Item on 1 Server", 
+  PlaceholderText = "item only",
+  Callback = function(Value)
+    
+  end
+})
+Check script
+Image Alt
