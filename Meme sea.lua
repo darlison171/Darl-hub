@@ -14,7 +14,7 @@ Tab1:AddDiscordInvite({
     Name = "Name Hub",
     Description = "Join server",
     Logo = "rbxassetid://18751483361",
-    Invite = "Link discord invite",
+    Invite = "https://discord.gg/X2xzKFw9aN",
 })
 local Tab1 = Window:MakeTab({"Um", "cherry"})
 
@@ -97,5 +97,3 @@ Tab1:AddTextBox({
     
   end
 })
-Check script
-Image Alt
