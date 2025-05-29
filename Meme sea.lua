@@ -9,7 +9,7 @@ Icon
 Window:AddMinimizeButton({
     Button = { Image = "rbxassetid://71014873973869", BackgroundTransparency = 0 },
     Corner = { CornerRadius = UDim.new(35, 1) },
-})p
+})
 Tab1:AddDiscordInvite({
     Name = "Name Hub",
     Description = "Join server",
